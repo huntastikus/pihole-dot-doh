@@ -19,7 +19,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1.2.1
         with:
           base-image: pihole/pihole:latest
-          image: devzwf/pihole-dot-doh:latest
+          image: devzwf/pihole-dot-doh:dev
         if: ${{ github.event_name == 'schedule' }}
 
   build:
@@ -55,6 +55,4 @@ jobs:
           platforms: linux/amd64
           push: false
           provenance: false
-          tags: |
-            devzwf/pihole-dot-doh:latest
-            devzwf/pihole-dot-doh:${{ steps.latest-tag.outputs.release }}
+          tags: devzwf/pihole-dot-doh:dev
