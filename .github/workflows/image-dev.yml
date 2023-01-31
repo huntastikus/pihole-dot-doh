@@ -1,4 +1,4 @@
-name: Image buid
+name: Image buid dev
 
 on:
   push:
